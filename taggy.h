@@ -131,23 +131,30 @@ public:
 
 public:
     void addTag2(string address,string tag){
-        unordered_map<string,set<string>> um=loadTagsToFile(address);
-        set<string> s;
-        if(um.count(address)){
-            s=um[address];
-        }
-        s.insert(tag);
-        um[address]=s;
-        saveTagsToFile(um,address);
-        um=loadFilesToTag();
-        set<string> s2;
-        if(um.count(tag)){
-            s2=um[tag];
-        }
-        s2.insert(address);
-        um[tag]=s2;
-        saveFilesToTag(um);
-    }
+            string fileName,temp=address;
+            while(temp[temp.size()-1]!='\\' && temp[temp.size()-1]!='/' ){
+                fileName.push_back(temp[temp.size()-1]);
+                temp.pop_back();
+            }
+            reverse(fileName.begin(),fileName.end());
+            cout<<"fileName:"<<fileName<<endl;
+            unordered_map<string,set<string>> um=loadTagsToFile(address);
+            set<string> s;
+            if(um.count(fileName)){
+                s=um[fileName];
+            }
+            s.insert(tag);
+            um[fileName]=s;
+            saveTagsToFile(um,address);
+            um=loadFilesToTag();
+            set<string> s2;
+            if(um.count(tag)){
+                s2=um[tag];
+            }
+            s2.insert(address);
+            um[tag]=s2;
+            saveFilesToTag(um);
+     }
 
     vector <string> searching(string tag)
     {
