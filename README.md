@@ -12,13 +12,13 @@
 - Consider two files file1.txt and file2.txt.
 - We add the tags `academics` and `maths` to file1.txt and `maths` to file2.txt.
 
-  <img src="./add_tag_demo.gif" height=450px width=700px>
+  <img src="./add_tag_demo.gif" height=450px width=auto>
 
 ### Search:
 
 - We search for the tag `maths`
 
-  <img src="./search_tags.gif" height=450px width=700px>
+  <img src="./search_tags.gif" height=450px width=auto>
 
 ## Features
 
