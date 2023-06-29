@@ -1,8 +1,9 @@
-# TAGGY
+# Taggy
 
 - Taggy is a file tagging system developed using C++ and QT Creator.
 - It provides a convenient way to tag files with custom labels or categories, making it easier to organize and search for files based on their tags.
 - <a href="https://github.com/Akshit1903/TaggyDeployment">Deployment</a>
+- <a href="https://youtu.be/maRVWniys08">YouTube</a>
 
 ## Tutorials:
 
@@ -24,7 +25,6 @@
 - File Tagging: Users can assign tags to files, allowing for easy categorization and organization.
 - Custom Tag Creation: Users can create their own tags or categories to suit their organizational needs.
 - Tag Search: The application provides a search functionality to quickly locate files based on their assigned tags.
-- Logical Querires- Can handle powerful queries containing logical expressions like AND and OR.
 - User-Friendly Interface: The intuitive and user-friendly interface of Taggy makes it simple to manage file tags.
 
 ## Technologies Used
@@ -60,5 +60,21 @@ Note:- Refer to <a href="https://github.com/Akshit1903/TaggyDeployment">Deployme
 3. Create custom tags or select from existing tags.
 4. Assign the selected tags to the chosen files or directories.
 5. Use the search functionality to find files based on their tags.
+
+## Logic
+
+- Two files are created during the lifecycle of the app:
+  - `fileTags.b`:
+    - Path: `C:\Users\%USERNAME\Documents\fileTags.b`
+    - For storing tags to file mapping
+  - `tags.b`:
+    - Path: The directory where the file is stored
+    - For storing files to tag mapping
+- The mapping is loaded into memory using C++ STL.
+
+## Future Scope
+
+- Handling edge cases with query operations of AND,OR etc.
+- Option to edit, delete tags etc.
 
 Happy tagging with Taggy!
